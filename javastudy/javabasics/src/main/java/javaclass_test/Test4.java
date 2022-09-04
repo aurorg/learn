@@ -14,3 +14,19 @@ public class Test4 {
         }
     }
 }
+
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int n = scanner.nextInt();
+//        String s = "";
+//        for (int i = 0; i < n; i ++ )
+//            s += "*";
+//        for (int i = 1; i <= n; i ++ ) {
+//            System.out.println(s.substring(0, i));
+//        }
+//    }
+//}
