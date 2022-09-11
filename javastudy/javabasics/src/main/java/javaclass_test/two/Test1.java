@@ -69,6 +69,7 @@ class LinearEquation {
     }
 
 
+    
     public boolean isSolvable(){
         boolean t=true;
         if(a*d-b*c==0)
