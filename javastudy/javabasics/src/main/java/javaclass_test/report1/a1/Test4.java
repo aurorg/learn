@@ -1,4 +1,4 @@
-package javaclass_test;
+package javaclass_test.report1.a1;
 
 import java.util.Scanner;
 

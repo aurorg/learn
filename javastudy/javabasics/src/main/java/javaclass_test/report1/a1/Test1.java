@@ -1,6 +1,5 @@
-package javaclass_test;
+package javaclass_test.report1.a1;
 
-import java.awt.*;
 import java.util.Scanner;
 /* 你的代码将被嵌入到这里 */
 
