@@ -3,6 +3,7 @@ package javaclass_test;
 import java.awt.*;
 import java.util.Scanner;
 /* 你的代码将被嵌入到这里 */
+
 class Rectangle{
 
     double width;
