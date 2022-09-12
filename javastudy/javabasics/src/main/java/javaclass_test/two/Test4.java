@@ -8,7 +8,7 @@ public class Test4{
         Scanner input =new Scanner(System.in);
         int n =input.nextInt();
         int[] a=new int[n];
-        
+
         for(int i=0;i<n;i++){
             a[i]= input.nextInt();
         }
