@@ -11,7 +11,7 @@ public class Test3 {
         for(int i=0;i<n;i++){
             a[i]= input.next();
         }
-        
+
         Arrays.sort(a);
 
 //        for(int i=0;i<n;i++){

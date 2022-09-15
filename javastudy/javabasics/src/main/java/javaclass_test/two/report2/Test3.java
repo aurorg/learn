@@ -1,8 +1,8 @@
-package javaclass_test.two;
+package javaclass_test.two.report2;
 
 import java.util.Scanner;
 
-public class Test1 {
+public class Test3 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
