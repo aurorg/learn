@@ -16,5 +16,6 @@ public class Test1 {
             if(i==n-1)
                 System.out.println(x);
         }
+
     }
 }
