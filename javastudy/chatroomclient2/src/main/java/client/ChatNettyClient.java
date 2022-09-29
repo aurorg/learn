@@ -23,7 +23,6 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 public class ChatNettyClient {
-
     public static final Object waitMessage=new Object();//服务端消息返回时，notify线程去通知
     public static final Object waitfile=new Object();
 

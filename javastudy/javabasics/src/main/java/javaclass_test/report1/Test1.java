@@ -6,12 +6,16 @@ public class Test1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter employee's name: ");
+
         String name = input.nextLine();
         System.out.print("Enter number of hours worked in a week: ");
+
         double hours = input.nextDouble();
         System.out.print("Enter hourly pay rate: ");
+
         double payRate = input.nextDouble();
         System.out.print("Enter federal tax withholding rate: ");
+
         double fedTaxRate = input.nextDouble();
         System.out.print("Enter state tax withholding rate: ");
         double staTaxRate = input.nextDouble();
