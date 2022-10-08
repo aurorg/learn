@@ -115,13 +115,10 @@ public class ChatNettyServer {
                                 }
                             });
 
-
-                            //需要用什么处理器直接加就行了
                             ch.pipeline().addLast(new SEnrollViewHandle()); //注册
                             ch.pipeline().addLast(new SLoginViewHandler());//登录
                             ch.pipeline().addLast(new SLogoutmsgViewHandler());//注销
                             ch.pipeline().addLast(new SOffLineHandler()); //下线处理
-
                             ch.pipeline().addLast(new SFriendChatHandler()); //好友聊天
                             ch.pipeline().addLast(new SInformationfriendhistoryHandler()); //查看好友历史消息
                             ch.pipeline().addLast(new SInformationfriendunreadHandler());  //查看好友未读消息的
@@ -131,8 +128,6 @@ public class ChatNettyServer {
                             ch.pipeline().addLast(new SShieldFriendHandler()); //屏蔽好友的
                             ch.pipeline().addLast(new SFriendListHandler()); //查看好友列表的
                             ch.pipeline().addLast(new SFriendGetFileHandler()); //接收文件的
-
-
                             ch.pipeline().addLast(new SGroupAuthenticationMessage()); //群成员身份确认的
                             ch.pipeline().addLast(new SGroupSetupHandler());//建群的
                             ch.pipeline().addLast(new SGroupDeleteHandler());//解散群的

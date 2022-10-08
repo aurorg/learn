@@ -21,13 +21,13 @@ public class MessageCodec extends ByteToMessageCodec<Message> {
     //public  int getMessageType();
     @Override
     protected void encode(ChannelHandlerContext channelHandlerContext, Message message, ByteBuf byteBuf) throws Exception {
-        //1.4 字节,魔数
+        //1.4 字节,
         byteBuf.writeBytes(new byte[]{9,2,6,4});
         //2.1 字节,序列化算法方式 0-->jdk ，1-->json
         byteBuf.writeByte(0);
         //3.1 字节,指令类型
         //byteBuf.writeByte(message.getMessageType());
-        //4.4 字节,请求序号（为了双工通信，提高异步能力）
+        //4.4 字节,请求序号
         byteBuf.writeInt(message.getSequenceId());
 
         ByteArrayOutputStream bos=new ByteArrayOutputStream();
