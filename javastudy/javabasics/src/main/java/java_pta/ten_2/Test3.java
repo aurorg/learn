@@ -27,7 +27,9 @@ public class Test3{
         int m,n;
         while(true)
         {
+            
             try{
+
                 m=sc.nextInt();
                 n=sc.nextInt();
                 System.out.println("Sum is "+(m+n));
