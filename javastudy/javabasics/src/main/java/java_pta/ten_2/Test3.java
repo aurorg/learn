@@ -27,7 +27,7 @@ public class Test3{
         int m,n;
         while(true)
         {
-            
+
             try{
 
                 m=sc.nextInt();
