@@ -9,16 +9,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="server" />
         <module name="javabasics" />
-        <module name="javathread" />
-        <module name="chatroomclient" />
         <module name="chatroomserver2" />
         <module name="a_server" />
         <module name="chatroom" />
-        <module name="client" />
         <module name="chatroomserver" />
         <module name="chatroomclient2" />
+        <module name="javathread" />
+        <module name="chatroomclient" />
+        <module name="client" />
         <module name="javanet" />
         <module name="a_client" />
+        <module name="demo1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,8 @@
       <module name="chatroomserver" target="11" />
       <module name="chatroomserver2" target="11" />
       <module name="client" target="11" />
+      <module name="demo" target="11" />
+      <module name="demo1" target="11" />
       <module name="javabasics" target="11" />
       <module name="javanet" target="11" />
       <module name="javastudy" target="11" />
