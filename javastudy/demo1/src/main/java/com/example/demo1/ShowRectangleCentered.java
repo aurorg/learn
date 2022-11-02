@@ -11,11 +11,13 @@ import javafx.stage.Stage;
 public class ShowRectangleCentered extends Application {
 
     public void start(Stage primaryStage) {
+
         Rectangle r111 = new Rectangle( 60, 30);
         r111.setStroke(Color.BLACK);
         r111.setFill(Color.WHITE);
         Group group = new Group();
         group.getChildren().add(r111);
+        
         Scene scene = new Scene(new BorderPane(group), 250, 150);
         primaryStage.setTitle("ShowRectangle");
         primaryStage.setScene(scene);
