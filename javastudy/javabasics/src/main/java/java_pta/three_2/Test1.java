@@ -11,16 +11,31 @@ package java_pta.three_2;
 
 import java.util.Scanner;
 /* 你提交的代码将被嵌入到这里 */
+//class Stock{
+//    String symbol;
+//    String name;
+//    double previousClosingPrice;
+//    double currentPrice;
+//
+//    public Stock(String symbol1, String name1) {
+//        this.symbol=symbol1;
+//        this.name=name1;
+//    }
+//    double changePercent(){
+//        return (currentPrice-previousClosingPrice)/previousClosingPrice;
+//    }
+//}
 class Stock{
     String symbol;
     String name;
     double previousClosingPrice;
     double currentPrice;
 
-    public Stock(String symbol1, String name1) {
+    public Stock(String symbol1,String name1){
         this.symbol=symbol1;
         this.name=name1;
     }
+
     double changePercent(){
         return (currentPrice-previousClosingPrice)/previousClosingPrice;
     }

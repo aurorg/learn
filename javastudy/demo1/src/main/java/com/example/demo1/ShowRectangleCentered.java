@@ -17,7 +17,7 @@ public class ShowRectangleCentered extends Application {
         r111.setFill(Color.WHITE);
         Group group = new Group();
         group.getChildren().add(r111);
-        
+
         Scene scene = new Scene(new BorderPane(group), 250, 150);
         primaryStage.setTitle("ShowRectangle");
         primaryStage.setScene(scene);
