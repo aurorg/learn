@@ -1,21 +1,24 @@
 package java_pta.report6;
 
-public class Test4 {
+
+public class Test5 {
     public static void main(String[] args) {
-        ComparableCircle comparableCircle1 = new ComparableCircle(-9.8);
-        ComparableCircle comparableCircle2 = new ComparableCircle(-7.6);
+        Circle circle1 = new Circle(-9, "red", true);
+        Circle circle2 = new Circle(-8, "green", false);
+        Circle circle3 = new Circle(-9, "green", false);
 
-        System.out.println("\nComparableCircle1:");
-        System.out.println(comparableCircle1);
-        System.out.println("\nComparableCircle2:");
-        System.out.println(comparableCircle2);
+        System.out.println("Circle1 radius: " + circle1.getRadius());
+        System.out.println("Circle2 radius: " + circle2.getRadius());
+        System.out.println("Circle3 radius: " + circle3.getRadius());
 
-        System.out.println((comparableCircle1.compareTo(comparableCircle2) == 1
-                ? "\nComparableCircle1 " : "\nComparableCircle2 ") +
-                "is the larger of the two Circles");
+        System.out.println("Circle1 is " + (circle1.equals(circle2) ? "" : "not ") +
+                "equal to circle2");
+
+        System.out.println("Circle1 is " + (circle1.equals(circle3) ? "" : "not ") +
+                "equal to circle3");
     }
 }
-class Circle extends GeometricObject {
+class Circle extends GeometricObject implements Comparable<Circle> {
     private double radius;
 
     public Circle() {
@@ -25,7 +28,8 @@ class Circle extends GeometricObject {
         this.radius = radius;
     }
 
-    public Circle(double radius,String color, boolean filled) {
+    public Circle(double radius,
+                  String color, boolean filled) {
         this.radius = radius;
         setColor(color);
         setFilled(filled);
@@ -36,40 +40,39 @@ class Circle extends GeometricObject {
     public void setRadius(double radius) {
         this.radius = radius;
     }
+
     public double getArea() {
         return radius * radius * Math.PI;
     }
+
     public double getDiameter() {
         return 2 * radius;
     }
+
+    @Override
     public double getPerimeter() {
         return 2 * radius * Math.PI;
     }
-    public String toString() {
-        return super.toString() + "\nDate created: " + getDateCreated() +
-                "\nRadius: " + radius;
-    }
-}
-class ComparableCircle extends Circle implements Comparable<ComparableCircle> {
 
-    public ComparableCircle() {
+    @Override
+    public boolean equals(Object o) {
+        return this.compareTo((Circle)o) == 0;
     }
-    public ComparableCircle(double radius) {
-        super(radius);
-    }
-    public ComparableCircle(double radius, String color, boolean filled) {
-        super(radius, color, filled);
-    }
-    public int compareTo(ComparableCircle o) {
-        if (getArea() > o.getArea())
+
+    @Override
+    public int compareTo(Circle o) {
+        if (this.radius > o.radius)
             return 1;
-        else if (getArea() < o.getArea())
+        else if (this.radius < o.radius)
             return -1;
         else
             return 0;
     }
+
+    @Override
     public String toString() {
-        return super.toString() + "\nArea: " + getArea();
+        return super.toString() + "\nDate created: " + getDateCreated() +
+                "\nRadius: " + radius;
     }
 }
 abstract class GeometricObject {
