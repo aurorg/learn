@@ -1,5 +1,5 @@
 package java_pta.report6;
-
+/*
 public class Test4 {
     public static void main(String[] args) {
         ComparableCircle comparableCircle1 = new ComparableCircle(-9.8);
@@ -108,3 +108,5 @@ abstract class GeometricObject {
     public abstract double getArea();
     public abstract double getPerimeter();
 }
+
+ */

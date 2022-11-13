@@ -1,5 +1,5 @@
 package java_pta.report6;
-
+/*
 public class Test6 {
     public static void main(String[] args) {
         GeometricObject[] array = {new Circle(5), new Circle(8),
@@ -180,3 +180,6 @@ class Rectangle extends GeometricObject implements Comparable<Rectangle> {
                 + "\nArea: " + getArea() + "\nPerimeter: " + getPerimeter();
     }
 }
+
+
+ */

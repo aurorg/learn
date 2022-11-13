@@ -1,6 +1,5 @@
 package java_pta.report6;
-
-
+/*
 import java.util.Scanner;
 
 public class Test1 {
@@ -95,3 +94,5 @@ class GeometricObject {
                 " and filled: " + filled;
     }
 }
+
+ */

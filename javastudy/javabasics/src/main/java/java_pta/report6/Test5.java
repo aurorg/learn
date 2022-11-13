@@ -1,6 +1,6 @@
 package java_pta.report6;
 
-
+/*
 public class Test5 {
     public static void main(String[] args) {
         Circle circle1 = new Circle(-9, "red", true);
@@ -111,3 +111,6 @@ abstract class GeometricObject {
     public abstract double getArea();
     public abstract double getPerimeter();
 }
+
+
+ */
