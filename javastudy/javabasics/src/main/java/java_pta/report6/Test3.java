@@ -8,10 +8,10 @@ public class Test3{
         Course course2 = new Course("Database Systems");
         Course course3 = new Course("Computer Systems");
 
-        course1.addStudent("Peter Jones");
-        course1.addStudent("Kim Smith");
-        course2.addStudent("Peter Jones");
-        course2.addStudent("Steve Smith");
+        course1.addStudent("hcsc");
+        course1.addStudent("aaaaa ");
+        course2.addStudent("rgfsdg");
+        course2.addStudent("gsfdrarfsa");
 
         System.out.println("Number of students in course1: "
                 + course1.getNumberOfStudents());

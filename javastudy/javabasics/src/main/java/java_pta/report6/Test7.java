@@ -1,5 +1,5 @@
 package java_pta.report6;
-
+/*
 public class Test7 {
     public static void main(String[] args) throws CloneNotSupportedException {
         Octagon octagon1 = new Octagon(-5);
@@ -88,3 +88,6 @@ class Octagon extends GeometricObject
                 "\nPerimeter: " + getPerimeter();
     }
 }
+
+
+ */
