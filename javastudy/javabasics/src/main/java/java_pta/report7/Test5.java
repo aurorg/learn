@@ -1,7 +1,7 @@
 package java_pta.report7;
 
 import java.util.Scanner;
-
+/*
 public class Test5{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -281,3 +281,5 @@ class Triangle
                 " side3 = " + side3;
     }
 }
+
+ */
