@@ -65,9 +65,7 @@ public class test8 extends Application {
         primaryStage.show(); // Display the stage
     }
 
-    /**
-     * Set list view selection mode
-     */
+    /** Set list view selection mode */
     private void setMode() {
         if (cbo.getValue().equals("SINGLE"))
             lv.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -75,14 +73,12 @@ public class test8 extends Application {
             lv.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 
-    /**
-     * Set label text to list view selected items
-     */
+    /** Set label text to list view selected items */
     private void setText() {
-        String items = "Selected items are ";
-        for (String i : lv.getSelectionModel().getSelectedItems())
+        String  items = "Selected items are ";
+        for (String i: lv.getSelectionModel().getSelectedItems())
             items += i + " ";
         lblSelectedItems.setText(items);
     }
-}
+    }
 
