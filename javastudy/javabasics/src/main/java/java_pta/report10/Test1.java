@@ -8,7 +8,7 @@ import java.io.*;
 
         try (
                 DataInputStream input =
-                        new DataInputStream(new FileInputStream("Exercise17_03.dat"));
+                        new DataInputStream(new FileInputStream("/home/shizhanli/java6.txt"));
         ) {
             while (true)
                 sum += input.readInt();
@@ -16,5 +16,6 @@ import java.io.*;
         catch (EOFException ex) {
             System.out.println("Sum of the integers is: " + sum);
         }
-    }
+
 }
+    }
