@@ -7,7 +7,7 @@ public class Test2 {
         int[] numbers = {1, 2, 3, 4, 5};
         try (
                 ObjectOutputStream output = new ObjectOutputStream(new
-                        FileOutputStream("Exercise17_05.dat"));
+                        FileOutputStream("/home/shizhanli/luck.txt"));
         ) {
             output.writeObject(numbers);
             output.writeDouble(5.5);

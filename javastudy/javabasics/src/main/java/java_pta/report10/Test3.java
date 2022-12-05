@@ -6,7 +6,7 @@ public class Test3 {
     public static void main(String[] args) throws IOException {
         try ( // Create a random access file
               RandomAccessFile inout =
-                      new RandomAccessFile("Exercise17_08.dat", "rw");
+                      new RandomAccessFile("/home/shizhanli/luck.txt", "rw");
         ) {
             // Check if file has been executed
             if (inout.length() == 0) {
