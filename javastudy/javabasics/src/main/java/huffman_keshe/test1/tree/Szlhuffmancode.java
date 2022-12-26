@@ -1,4 +1,4 @@
-/*package second.test;
+package huffman_keshe.test1.tree;
 
 import java.io.*;
 import java.util.*;
@@ -535,4 +535,3 @@ class Node implements Comparable<Node>{
 
 }
 
-*/
