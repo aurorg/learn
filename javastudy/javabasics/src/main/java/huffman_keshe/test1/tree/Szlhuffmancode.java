@@ -1,3 +1,4 @@
+/*
 package huffman_keshe.test1.tree;
 
 import java.io.*;
@@ -395,7 +396,7 @@ public class Szlhuffmancode {
         return nodes.get(0);
     }
 
-    abstract class AuroraTree<E> implements MyTree<E> {
+    abstract class Tree<E> implements MyTree<E> {
         //建树
         public Node createHuffmanTree(List<Node> nodes) {
             while (nodes.size() > 1) {
@@ -535,3 +536,5 @@ class Node implements Comparable<Node>{
 
 }
 
+
+ */
