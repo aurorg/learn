@@ -11,28 +11,27 @@ public class HuffmanCode {
         System.out.println(contentBytes.length);//40
 
 
-        List<Node> nodes =getNodes(contentBytes);
+        List<Node> nodes = getNodes(contentBytes);
         System.out.println(nodes);
 
         //测试创建的二叉树
         System.out.println("哈弗曼树");
-        Node huffmanTreeRoot =createHuffmanTree(nodes);
+        Node huffmanTreeRoot = createHuffmanTree(nodes);
         System.out.println("前序遍历");
         huffmanTreeRoot.preOrder();
     }
 
     //前序遍历的方法
-    private static void preOrder(Node root){
-        if(root!=null){
+    private static void preOrder(Node root) {
+        if (root != null) {
             root.preOrder();
-        }else{
+        } else {
             System.out.println("空的");
         }
     }
 
 
     /**
-     *
      * @param bytes 接收字节数组
      * @return 返回的是list形式，【Node{data='97,weight=5}】
      */
@@ -48,33 +47,33 @@ public class HuffmanCode {
             if (count == null) {//Map中还没有这个字符数据，第一次放入
                 counts.put(b, 1);
             } else {
-                counts.put(b, count+1);
+                counts.put(b, count + 1);
             }
         }
         //把每个键值对转成一个Node对象，并且加入到nodes集合
         //遍历map
-        for(Map.Entry<Byte,Integer> entry: counts.entrySet()){
-            nodes.add(new Node(entry.getKey(),entry.getValue()));
+        for (Map.Entry<Byte, Integer> entry : counts.entrySet()) {
+            nodes.add(new Node(entry.getKey(), entry.getValue()));
         }
         return nodes;
     }
 
     //通过list创建对应的哈弗曼树
-    private static Node createHuffmanTree(List<Node> nodes){
-        while(nodes.size()>1){
+    private static Node createHuffmanTree(List<Node> nodes) {
+        while (nodes.size() > 1) {
             //排序，从小到大
             Collections.sort(nodes);
 
             //取出第一颗最小的二叉树
-            Node leftNode =nodes.get(0);
+            Node leftNode = nodes.get(0);
 
             //取出第二颗最小的二叉树
-            Node rightNode =nodes.get(1);
+            Node rightNode = nodes.get(1);
 
             //创建一颗新的二叉树，它的根结点没有data，只有取值
-            Node parent=new Node(null, leftNode.weight + rightNode.weight);
-            parent.left=leftNode;
-            parent.right=rightNode;
+            Node parent = new Node(null, leftNode.weight + rightNode.weight);
+            parent.left = leftNode;
+            parent.right = rightNode;
 
             //将已经处理过的两颗二叉树从nodes中移除
             nodes.remove(leftNode);
