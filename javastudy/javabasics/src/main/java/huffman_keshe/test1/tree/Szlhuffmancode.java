@@ -1,6 +1,8 @@
 
 package huffman_keshe.test1.tree;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.*;
 import java.util.*;
 
@@ -17,16 +19,80 @@ interface MyTree<E>{
 
 public class Szlhuffmancode {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        //测试压缩文件
+        while(true) {
+            System.out.println("*********************************");
+            System.out.println("*****欢迎进入我的哈夫曼编码译码器*****");
+            System.out.println("*****接下来请你根据需求进行选择哦*****");
+            System.out.println("*****   【1】编码(压缩文件)    *****");
+            System.out.println("*****   【2】译码(解压文件)    *****");
+            System.out.println("*****   【0】退出             *****");
+            System.out.println("*********************************");
 
-        String srcFile = "/home/shizhanli/java11.txt";
-        String dstFile = "/home/shizhanli/javatest.txt";
+            String n = input.next();
+            while (!StringUtils.isNumeric(n)) {
+                System.out.println("不合法输入，重新输入哦！");
+                n = input.next();
+            }
 
-       zipFile(srcFile,dstFile);
-       System.out.println("压缩好了");
+            switch (Integer.parseInt(n)) {
+                case 1:
+                    //测试一：文本
+//                    String srcFile1 = "/home/shizhanli/souce1.txt";
+//                    String dstFile1 = "/home/shizhanli/code1.txt";
+                    //测试二：图片
+//                    String srcFile1 = "/home/shizhanli/souce2.jpg";
+//                    String dstFile1 = "/home/shizhanli/code2.jpg";
+                    //测试三：视频
+//                    String srcFile1 = "/home/shizhanli/souce3.webm";
+//                    String dstFile1 = "/home/shizhanli/code3.webm";
 
+                    System.out.println("请输入你需要压缩文件的绝对路径：");
+                    String srcFile1=input.next();
+                    System.out.println("请输入你需要将压缩后的文件的保存路径：");
+                    String dstFile1=input.next();
+
+                    zipFile(srcFile1, dstFile1);
+                    System.out.println("压缩成功");
+
+                    break;
+
+                case 2:
+                      //测试一：文本
+//                    String zipFile1 = "/home/shizhanli/code1.txt";
+//                    String dstFile1 = "/home/shizhanli/decode1.txt";
+
+                    //测试二：图片
+//                    String zipFile1 = "/home/shizhanli/code2.jpg";
+//                    String dstFile1 = "/home/shizhanli/decode2.jpg";
+
+                    //测试三：视频
+//                    String zipFile1 = "/home/shizhanli/code3.webm";
+//                    String dstFile1 = "/home/shizhanli/decode3.webm";
+                    System.out.println("请输入你需要解压文件的绝对路径：");
+                    String zipFile2=input.next();
+                    System.out.println("请输入你需要将解压后的文件的保存路径：");
+                    String dstFile2=input.next();
+
+                    unZipFile(zipFile2, dstFile2);
+                    System.out.println("解压成功");
+
+                case 0:
+                    System.out.println("谢谢你的使用，再见啦！");
+                    return;
+
+            }
+        }
+//        //测试压缩文件
 //
+//        String srcFile = "/home/shizhanli/java11.txt";
+//        String dstFile = "/home/shizhanli/javatest.txt";
+//
+//       zipFile(srcFile,dstFile);
+//       System.out.println("压缩好了");
+
+
 //        //测试解压文件
 //        String zipFile = "/home/shizhanli/hahaha.jpg";
 //        String dstFile = "/home/shizhanli/happy.jpg";
