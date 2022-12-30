@@ -1,4 +1,4 @@
-/*
+
 package huffman_keshe.test1.tree;
 
 import java.io.*;
@@ -20,19 +20,19 @@ public class Szlhuffmancode {
 
         //测试压缩文件
 
-//        String srcFile = "/home/shizhanli/luck.txt";
-//        String dstFile = "/home/shizhanli/lucck.txt";
+        String srcFile = "/home/shizhanli/java11.txt";
+        String dstFile = "/home/shizhanli/javatest.txt";
+
+       zipFile(srcFile,dstFile);
+       System.out.println("压缩好了");
+
 //
-//       zipFile(srcFile,dstFile);
-//       System.out.println("压缩好了");
-
-
-        //测试解压文件
-        String zipFile = "/home/shizhanli/lucck.txt";
-        String dstFile = "/home/shizhanli/happy.txt";
-
-        unZipFile(zipFile, dstFile);
-        System.out.println("解压好了");
+//        //测试解压文件
+//        String zipFile = "/home/shizhanli/hahaha.jpg";
+//        String dstFile = "/home/shizhanli/happy.jpg";
+//
+//        unZipFile(zipFile, dstFile);
+//        System.out.println("解压好了");
 
 
 //        String content  = "linux group linux group is very good";
@@ -537,4 +537,4 @@ class Node implements Comparable<Node>{
 }
 
 
- */
+
