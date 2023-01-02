@@ -1,4 +1,3 @@
-
 package huffman_keshe.test1.tree;
 
 import org.apache.commons.lang3.StringUtils;
@@ -6,13 +5,19 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.*;
 import java.util.*;
 
-interface MyTree<E>{
+interface MyTree<E> {
     Node createHuffmanTree(List<Node> nodes);
+
     void mirrorTree(Node root);
+
     void mirrorTree2(Node root);
+
     void preOrder(Node root);
+
     void mirrorTreeQueue(Node root);
+
     void widthTree(Node root);
+
     boolean CompleteTree(Node root);
 
 }
@@ -21,7 +26,7 @@ public class Szlhuffmancode {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        while(true) {
+        while (true) {
             System.out.println("*********************************");
             System.out.println("*****欢迎进入我的哈夫曼编码译码器*****");
             System.out.println("*****接下来请你根据需求进行选择哦*****");
@@ -49,9 +54,9 @@ public class Szlhuffmancode {
 //                    String dstFile1 = "/home/shizhanli/code3.webm";
 
                     System.out.println("请输入你需要压缩文件的绝对路径：");
-                    String srcFile1=input.next();
+                    String srcFile1 = input.next();
                     System.out.println("请输入你需要将压缩后的文件的保存路径：");
-                    String dstFile1=input.next();
+                    String dstFile1 = input.next();
 
                     zipFile(srcFile1, dstFile1);
                     System.out.println("压缩成功");
@@ -59,7 +64,7 @@ public class Szlhuffmancode {
                     break;
 
                 case 2:
-                      //测试一：文本
+                    //测试一：文本
 //                    String zipFile1 = "/home/shizhanli/code1.txt";
 //                    String dstFile1 = "/home/shizhanli/decode1.txt";
 
@@ -71,9 +76,9 @@ public class Szlhuffmancode {
 //                    String zipFile1 = "/home/shizhanli/code3.webm";
 //                    String dstFile1 = "/home/shizhanli/decode3.webm";
                     System.out.println("请输入你需要解压文件的绝对路径：");
-                    String zipFile2=input.next();
+                    String zipFile2 = input.next();
                     System.out.println("请输入你需要将解压后的文件的保存路径：");
-                    String dstFile2=input.next();
+                    String dstFile2 = input.next();
 
                     unZipFile(zipFile2, dstFile2);
                     System.out.println("解压成功");
@@ -341,7 +346,6 @@ public class Szlhuffmancode {
 //        }
 //    }
 
-
     //传进去：字节数组byte[] bytes
     //返回：List<Node>,形式【Node[date=97(数据）,weight = 5】
     private static List<Node> getNodes(byte[] bytes) {
@@ -489,12 +493,13 @@ public class Szlhuffmancode {
         }
 
         //是否是一颗完整的树
-        public boolean CompleteTree(Node root){
-            if(root !=null)
+        public boolean CompleteTree(Node root) {
+            if (root != null)
                 return true;
             else
                 return false;
         }
+
         //前序遍历方法
         public void preOrder(Node root) {
             if (root != null) {
@@ -503,6 +508,7 @@ public class Szlhuffmancode {
                 System.out.println("空树");
             }
         }
+
         //树的镜像（递归）
         public void mirrorTree(Node root) {
             if (root == null) return;
@@ -570,17 +576,19 @@ public class Szlhuffmancode {
 }
 
 //创建结点，放数据和权值~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Node implements Comparable<Node>{
+class Node implements Comparable<Node> {
     Byte data;//存放数据本身，eg:a是97，b是98
     int weight;//权值，表示字符出现的次数
     Node left;//左边
     Node right;//右边
-    public Node(Byte data,int weight){ //构造器
+
+    public Node(Byte data, int weight) { //构造器
         this.data = data;
         this.weight = weight;
     }
+
     @Override
-    public int compareTo(Node o){
+    public int compareTo(Node o) {
         return this.weight - o.weight;//从小到大排序
         //return -(this.weight - o.weight);从大到小排序
     }
@@ -590,12 +598,12 @@ class Node implements Comparable<Node>{
     }//打印结点信息
 
     //前序遍历
-    public void preOrder(){
+    public void preOrder() {
         System.out.println(this);
-        if(this.left != null){
+        if (this.left != null) {
             this.left.preOrder();
         }
-        if(this.right != null){
+        if (this.right != null) {
             this.right.preOrder();
         }
     }
