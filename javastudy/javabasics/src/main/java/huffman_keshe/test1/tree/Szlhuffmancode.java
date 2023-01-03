@@ -36,13 +36,15 @@ public class Szlhuffmancode {
             System.out.println("*********************************");
 
             String n = input.next();
-            while (!StringUtils.isNumeric(n)) {
-                System.out.println("不合法输入，重新输入哦！");
-                n = input.next();
-            }
+//            while (!StringUtils.isNumeric(n)) {
+//                System.out.println("不合法输入，重新输入哦！");
+//                n = input.next();
+//            }
 
             switch (Integer.parseInt(n)) {
                 case 1:
+
+
                     //测试一：文本
 //                    String srcFile1 = "/home/shizhanli/souce1.txt";
 //                    String dstFile1 = "/home/shizhanli/code1.txt";
@@ -64,6 +66,8 @@ public class Szlhuffmancode {
                     break;
 
                 case 2:
+
+
                     //测试一：文本
 //                    String zipFile1 = "/home/shizhanli/code1.txt";
 //                    String dstFile1 = "/home/shizhanli/decode1.txt";
