@@ -1,7 +1,8 @@
 package exam;
 
-//简单计算器
-public class Test15 {
+//字符串替换
+
+public class Test19 {
     public static void main(String[] args) {
 
     }

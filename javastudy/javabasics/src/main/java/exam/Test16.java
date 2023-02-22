@@ -1,7 +1,8 @@
 package exam;
 
-//简单计算器
-public class Test15 {
+//标识符转换
+
+public class Test16 {
     public static void main(String[] args) {
 
     }

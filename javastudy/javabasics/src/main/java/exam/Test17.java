@@ -1,7 +1,8 @@
 package exam;
 
-//简单计算器
-public class Test15 {
+
+//直角三角形实现IShape接口
+public class Test17 {
     public static void main(String[] args) {
 
     }
