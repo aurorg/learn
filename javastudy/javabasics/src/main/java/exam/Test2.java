@@ -2,16 +2,15 @@ package exam;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-abstract class shape {// 抽象类
+//正五边形类
 
+abstract class shape {// 抽象类
     /* 抽象方法 求面积 */
     public abstract double getArea();
-
     /* 抽象方法 求周长 */
     public abstract double getPerimeter();
 }
 /* 你提交的代码将被嵌入到这里 */
-
 public class Test2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -26,6 +25,7 @@ public class Test2 {
     }
 }
 
+//补全代码
 class RPentagon extends shape{
     private double a;
 

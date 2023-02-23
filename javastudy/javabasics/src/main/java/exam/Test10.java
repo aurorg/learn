@@ -1,11 +1,7 @@
 package exam;
 
 //将学生对象按照成绩降序排序、
-
-import nine.A;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 

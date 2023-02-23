@@ -1,5 +1,5 @@
 package exam;
-
+//矩形类
 import java.util.Scanner;
 
 public class Test1 {
@@ -16,6 +16,7 @@ public class Test1 {
     }
 }
 
+//补全代码
 class Rectangle{
     private double width;
     private double height;

@@ -10,8 +10,6 @@ abstract class shape{
 
     public abstract double getPerimeter();
 }
-
-
 public class Test12 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -24,7 +22,6 @@ public class Test12 {
         input.close();
     }
 }
-
 //补全代码
 class Circle extends shape{
     private double radius;
